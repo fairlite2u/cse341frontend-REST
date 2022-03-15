@@ -65,7 +65,7 @@ class App extends Component {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        email: authData.email, 
+        email: authData.email,
         password: authData.password
       })
     })
@@ -110,12 +110,12 @@ class App extends Component {
     event.preventDefault();
     this.setState({ authLoading: true });
     fetch('http://localhost:8080/auth/signup', {
-      method: 'PUT', 
+      method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        email: authData.signupForm.email.value, 
+        email: authData.signupForm.email.value,
         password: authData.signupForm.password.value,
         name: authData.signupForm.name.value
       })
